@@ -1,0 +1,342 @@
+*, all, body {
+  padding: 0; margin: 0;
+}
+
+@font-face {
+    font-family: 'DKCrayonCrumble';
+    src: url('dk-crayon-crumble.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal; 
+}
+@font-face {
+    font-family: 'appleberry';
+    src: url('appleberry.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal; 
+}
+
+span:hover {
+  cursor: pointer;
+}
+
+
+body {
+  font-family: DKCrayonCrumble;
+  background: #fff url('../images/background.jpg') no-repeat;
+  color: #fff;
+  width: 100%; height: 100%
+}
+ 
+ 
+#content {
+  margin: 0 auto;
+  padding: 0px;
+  width: 680px;
+  text-align: center;
+  background-color: transparent;
+}
+
+#topbar {
+  margin: 0 auto;
+  width: 680px; height: 80px;
+  text-align: right;
+  font-size: 30px;
+  text-transform: lowercase;
+  font-family: Myriad Pro;
+}
+
+#stopwatch,#score {
+  padding-top: 15px;
+  margin-left: 20px;
+  display: none;
+  float: right;
+}
+#returntomenu {
+  padding-top: 15px;
+  float: left;
+  display:none;
+}
+
+h1, strong {
+	font-weight: normal;
+}
+
+#menu h1 {
+  font-size: 180px;
+  margin-top: 60px;
+}
+
+#menu ul {
+  list-style-type: none;
+  margin-top: 200px;
+}
+
+#menu li {
+  height: 170px;
+}
+
+#menu span {
+  color: #fff; text-decoration: none;
+  font-size: 60px;
+}
+
+#wordselect h1 {
+  font-size: 70px;
+  margin-top: 10px
+}
+
+#wordselect ul {
+  list-style-type: none;
+  margin-top: 30px;
+}
+
+#wordselect li {
+  font-size: 50px;
+  width: 600px;
+  height: 85px;
+  font-weight: normal;
+}
+
+#wordselect span {
+  color: #fff; text-decoration: none;
+}
+
+img {
+  border: none;
+  float: left;
+}
+
+#content_left {
+  width: 680px; height: 650px;
+  background: transparent url('../images/hangman_background.png') no-repeat;
+}
+#content_lefta {
+  width: 680px; height: 650px;
+}
+
+#content_middle {
+  width: 680px; height: 150px;
+  background-color: transparent;
+
+}
+
+#content_right {
+  width: 680px; height: 370px;
+  background-color: transparent;
+  text-align: center;
+}
+
+#word {
+  width: 660px; height: 130px;
+  text-align: right; 
+}
+
+.guessLetter {
+  width: 50px; height: 95px;
+  border-bottom: 2px solid #fff;
+  float:right;
+  margin-right: 17px; margin-top: 10px;
+  font-size: 100px;
+  text-align: center;
+}
+.guessLetterSmall {
+  width: 35px; height: 55px;
+  border-bottom: 2px solid #fff;
+  float:right;
+  margin-right: 5px; margin-top: 20px;
+  font-size: 65px;
+  text-align: center;
+}
+.guessLetterSmaller {
+  width: 25px; height: 45px;
+  border-bottom: 2px solid #fff;
+  float:right;
+  margin-right: 5px; margin-top: 30px;
+  font-size: 45px;
+  text-align: center;
+}
+.guessLetterSmallest {
+  width: 20px; height: 40px;
+  border-bottom: 2px solid #fff;
+  float:right;
+  margin-right: 5px; margin-top: 40px;
+  font-size: 45px;
+  text-align: center;
+}
+
+#category {
+  width: 600px; height: 30px;
+  float: right;
+  font-size: 40px;
+  text-align: right; 
+  clear: right;
+  margin-top: 20px; 
+}
+
+span.letter, span.letter_input {
+  font-family: appleberry;
+  text-transform: uppercase;
+  font-size: 85px;
+  margin-left: 29px;
+  margin-top: 30px;
+  float: left;
+  line-height: 1;
+  color: rgba(255,255,255,1);
+}
+span.disabled {
+  color: rgba(255,255,255,.4);
+}
+
+
+#letters {
+  width: 680px; height: 300px;
+  margin-left:0;
+}
+
+#letters_input {
+  width: 680px; height: 300px;
+  margin-left: 0px;
+  clear: both;
+}
+
+#message {
+  width: 768px; height: 1180px;
+  position: absolute; z-index: 98;
+  top: 100px; left: 0px;
+  display: none;
+}
+
+#msg_content {
+  width: 680px; height: 330px;
+  position: relative; z-index: 99;
+  top: 780px; margin:auto;
+  background-color: transparent;
+  font-size: 100px;
+  padding-top: 50px
+}
+
+#msg_content p {
+  margin-top: 0px;
+}
+
+#msg_content span {
+  color: white;
+  text-decoration: none;
+  font-size: 70px;
+  margin: 50px 0 0 0;
+}
+
+.inputLetter {
+  width: 50px; height: 60px;
+  border-bottom: 2px solid #fff;
+  float:left;
+  margin-left: 5px; margin-top: 20px;
+  font-size: 70px;
+  text-align: center;
+}
+
+
+#shortcuts {
+  font-size: 60px;
+  height: 50px;
+}
+
+#shortcuts span {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px 20px 20px;
+}
+
+#enterWord {
+  font-size: 90px;
+  padding-top: 30px;
+}
+
+#word_input {
+  width: 670px;
+  margin-top: 200px;
+  margin-left: 14px; text-align: right;
+}
+
+#space, #backspace {
+  float: left;
+}
+#submit {
+  float: right;
+}
+
+#achievementbrowser {
+  font-size: 40px;
+  text-align: center;
+}
+
+#achievementbrowser table {
+ margin: 0 auto 20px auto;
+ text-align: left;
+}
+
+#achievementbrowser tr {
+ height: 25px;
+}
+
+#statsbrowser {
+  font-size: 22px;
+  text-align: center;
+}
+
+.statlink {
+  clear: both;
+  font-size: 60px;
+}
+
+#achievementbrowser h1, #statsbrowser h1 {
+  font-size: 80px;
+  margin: 30px auto 0 auto;
+}
+
+#achievementbrowser ul, #statsbrowser ul {
+  list-style-type: none;
+  margin-top: 0; margin-bottom: 30px;
+  text-align: left;
+}
+
+#achievementbrowser li, #statsbrowser li {
+  font-size: 40px;
+  width: 650px;
+  height: 58px;
+}
+
+
+.achievement {
+  width: 100%; height: 90px;
+  position: absolute; z-index: 98;
+  top: -90px; left: 0px;
+  background-color: transparent;
+  /*background-image: url('../images/achievement_background.png');*/
+  font-family: Myriad Pro;
+  text-align: center;
+}
+
+.achiev_content {
+  width: 680px; margin: 10px auto 0 auto;
+  color: #000000; font-size: 32px;
+  background-color: #fff;
+  height: 60px;
+}
+
+.achiev_content p {
+  width: 680px;
+  margin-top: 0px; 
+}
+
+.achiev_content span {
+  color: white;
+  text-decoration: none;
+  margin: 0px;
+  width: 70px;
+  float: left;
+}
+
+span.right {
+  float: right;
+}

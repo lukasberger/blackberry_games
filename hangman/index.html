@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<html>
+	<head>
+    <script>
+      var meta = document.createElement("meta");
+      meta.setAttribute('name','viewport');
+      meta.setAttribute('content','initial-scale='+ (1/window.devicePixelRatio) + ',user-scalable=no');
+      document.getElementsByTagName('head')[0].appendChild(meta);
+    </script>
+    <meta id="touch-event-mode" content="native"/>		
+  	<script type="text/javascript" src="javascript/jquery.js"></script>
+    <script type="text/javascript" src="javascript/core.js"></script>
+    <script type="text/javascript" src="javascript/hangman.js"></script>
+    <script type="text/javascript" src="javascript/database.js"></script>
+    <script type="text/javascript" src="javascript/achievements.js"></script>	  
+    <link  rel="stylesheet" type="text/css" href="css/hangman.css"><link />
+  	<title>Hangman</title>
+  </head>
+	<body>
+    <div id="topbar" style="">
+		<span id="returntomenu">Menu</span>
+		<div id="stopwatch">Time: 00:00</dizv>
+		<div id="score">Score: 0</div>
+	</div>
+	<div id="content">
+      <div id="menu">
+        <h1>Hangman</h1>
+        <ul>
+          <li><span href="#wordselect" class="menu" id="1player">choose a category</span></li>
+          <li style="margin-top:0px;"><span href="#wordinput" class="menu" id="2player">play with a friend</span></li>
+          <li style="margin-top:20px;"><span href="#achievementbrowser" class="menu" id="achiev">achievements and statistics</span></li>
+          <li style="margin-top:30px;"><span href="#exit" class="menu" id="exit" onclick="javascript:blackberry.app.exit()">exit</span></li>
+        </ul>
+      </div>
+      <div id="wordselect" style="display:none;">
+        <h1>Choose a Category</h1>
+        <ul style="float:left; margin-left: 40px;">
+          <li><span href="#" class="category">action words</span></li>
+          <li><span href="#" class="category">adjectives</span></li>
+          <li><span href="#" class="category">american presidents</span></li>
+          <li><span href="#" class="category">animals</span></li>
+          <li><span href="#" class="category">astrology terms</span></li>
+          <li><span href="#" class="category">colors</span></li>
+          <li><span href="#" class="category">countries</span></li>
+          <li><span href="#" class="category">expressive words</span></li>
+          <li><span href="#" class="category">materials</span></li>
+          <li><span href="#" class="category">sports</span></li>
+          <li><span href="#" class="category">transport words</span></li>
+          <li><span href="#" class="category">words that describe</span></li>
+        </ul>
+      </div>
+      <div id="wordinput" style="display:none;">
+        <div id="content_lefta">
+          <div id="enterWord">Enter a Word:</div>
+          <div id="word_input">
+          </div> 
+        </div>
+        <div id="content_middle">
+          <div id="shortcuts">
+            <span href="#space" id="space">space</span><span href="#backspace" id="backspace">backspace</span><span href="#submit" id="submit">play!</span>
+          </div> 
+        </div>
+        <div id="content_right">     
+          <div id="letters_input">
+              <script type="text/javascript">
+              var lettersa = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+              for (var i = 0; i < lettersa.length; i++) {
+                document.write("<span id=\""+lettersa[i]+"_input\" class=\"letter_input\">"+lettersa[i]+"</span>");
+              };
+              </script>
+          </div>
+        </div>
+      </div>
+      <div id="game" style="display:none;"> 
+          <div id="message">
+            <div id="msg_content">
+              <p></p>
+              <span href="#game" class="msglink">play again</span>&nbsp;&nbsp;&nbsp;<span href="#menu" class="msglink">menu</span>
+            </div>
+          </div>  
+        <div id="content_left">
+          <!-- hangman -->
+          <img src="images/h_rope.png" id="hang1" class="hangman" style="position: relative; top: 76px; left: 329px;">
+          <img src="images/h_head.png" id="hang2" class="hangman" style="position: relative; top: 146px; left: 227px;">
+          <img src="images/h_body.png" id="hang3" class="hangman" style="position: relative; top: 260px; left: 149px;">
+          <img src="images/h_arm_left.png" id="hang4" class="hangman" style="position: relative; top: 260px; left: 47px;;">
+          <img src="images/h_arm_right.png" id="hang5" class="hangman" style="position: relative; top: 260px; left: 63px;">
+          <img src="images/h_leg_left.png" id="hang6" class="hangman" style="position: relative; top: 384px; left: -90px;">
+          <img src="images/h_leg_right.png" id="hang7" class="hangman" style="position: relative; top: 384px; left: -90px;">        
+        </div>
+        <div id="content_middle">
+          <div id="word">
+          </div>  
+        </div>
+        <div id="content_right">      
+          <div id="letters">
+            <script type="text/javascript">
+              var lettersa = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+              for (var i = 0; i < lettersa.length; i++) {
+                document.write("<span id=\""+lettersa[i]+"\" class=\"letter\">"+lettersa[i]+"</span>");
+              };
+            </script>
+          </div>
+        </div>
+      </div>
+      <div id="achievementbrowser" style="display:none;">
+      </div>
+      <div id="statsbrowser" style="display:none;">
+      </div>
+      <div id="achievements">
+      </div>
+    </div>
+	</body>
+</html>
+
